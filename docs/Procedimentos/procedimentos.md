@@ -409,6 +409,96 @@ END
 
 ---
 
+## 📋 Próximos passos
+
+### Etapa 15. 📋 Contagem de fragmentos por tamanho
+
+**Objetivo:** Quantificar o número de fragmentos em cada classe de tamanho (Muito pequeno, Pequeno, Médio, Grande, Muito grande) para caracterizar a estrutura da paisagem.
+
+**Como fazer (QGIS):**
+1. Abra a camada `Fragmentos_MataNativa_BH_I_ES`
+2. Use a ferramenta **Resumir por categoria** (Vetor > Ferramentas de análise > Resumir por categoria) ou a **Tabela de atributos** com o campo `classe_tamanho` (ou `Tamanho`)
+3. Conte as feições por valor do campo de classificação de tamanho
+4. Registre os resultados em tabela (ex.: em `resultados/` ou na documentação)
+
+**Alternativa:** Na tabela de atributos, use *Selecionar feições por expressão* para cada classe e anote a contagem, ou exporte para planilha e use tabela dinâmica.
+
+---
+
+### Etapa 16. 📋 Aplicar classificações para visualização por cor em shapes diferentes
+
+**Objetivo:** Criar camadas separadas (ou estilos distintos) para visualizar fragmentos por tamanho, forma e conectividade, cada um com esquema de cores adequado.
+
+**Procedimento:**
+1. **Por tamanho:** Estilizar a camada `Fragmentos_MataNativa_BH_I_ES` pelo campo `classe_tamanho` (ou `Tamanho`) com cores distintas (ex.: gradiente do menor ao maior fragmento)
+2. **Por forma:** Estilizar pelo campo `classe_forma` (ou `Forma`) com paleta adequada (Compacto, Alongado, Muito alongado)
+3. **Por conectividade:** Estilizar pelo campo `classe_conectividade` (ou `Conectividade`) com cores que indiquem alta, média e baixa conectividade
+
+**Opcional:** Exportar cópias da camada para shapes/GeoPackages distintos (ex.: `Fragmentos_por_Tamanho.gpkg`, `Fragmentos_por_Forma.gpkg`, `Fragmentos_por_Conectividade.gpkg`) com estilos salvos (.qml) para uso em mapas temáticos.
+
+**Como fazer (QGIS):** Painel de Camadas → clique direito na camada → *Propriedades* → *Simbologia* → *Categorizado* → campo desejado → *Classificar* → ajustar cores e rótulos.
+
+---
+
+### Etapa 17. 📋 Construir os mapas com legendas adequadas
+
+**Objetivo:** Produzir mapas finais para relatório ou publicação, com layout, escala, norte, legenda e demais elementos cartográficos.
+
+**Procedimento:**
+1. Abra o **Compositor de impressão** (Projeto > Novo layout de impressão)
+2. Adicione o mapa da área de estudo com as camadas estilizadas (Etapa 16)
+3. Inclua **legenda** com as classes de tamanho, forma e conectividade (conforme o mapa temático)
+4. Adicione **escala gráfica**, **rosa dos ventos** e **título**
+5. Salve o layout e exporte em PNG ou PDF para `figuras/` ou `resultados/`
+
+**Sugestão de mapas:**
+- Mapa 1: Fragmentos por tamanho (legenda: Muito pequeno, Pequeno, Médio, Grande, Muito grande)
+- Mapa 2: Fragmentos por forma (legenda: Compacto, Alongado, Muito alongado)
+- Mapa 3: Fragmentos por conectividade (legenda: Alta, Média, Baixa conectividade)
+
+**Onde salvar:** `figuras/` ou `resultados/` conforme a estrutura do projeto.
+
+---
+
+## 🔮 Análises futuras
+
+### Etapa 18. 🔮 Análise de fragmentos por município
+
+**Objetivo:** Quantificar e caracterizar os fragmentos de Mata Nativa em cada município da Bacia do Itabapoana (ES), permitindo comparações entre municípios e identificação de prioridades locais.
+
+**Dados necessários:**
+- `Fragmentos_MataNativa_BH_I_ES.gpkg` (fragmentos com métricas calculadas)
+- Municípios com área na bacia (interseção Municípios ∩ Bacia, Etapa 4)
+
+**Procedimento (QGIS):**
+1. **Interseção espacial:** Vetor > Ferramentas de geoprocessamento > Interseção. Camada de entrada: fragmentos; camada de recorte: municípios da bacia. Resultado: cada fragmento ganha atributo do município (ou municípios, se houver polígonos em mais de um).
+2. **Resumir por categoria:** Contar fragmentos e somar área por município. Campos úteis: `classe_tamanho`, `classe_forma`, `classe_conectividade`.
+3. **Tabela de resultados:** Número de fragmentos, área total (ha), área média por fragmento, distribuição por classe de tamanho/forma/conectividade por município.
+
+**Saídas esperadas:** Tabela e mapas temáticos por município; identificação de municípios com maior fragmentação ou maior concentração de fragmentos grandes.
+
+---
+
+### Etapa 19. 🔮 Análise de fragmentos por sub-bacias
+
+**Objetivo:** Analisar a distribuição dos fragmentos nas sub-bacias (micro, meso ou macro) da Bacia do Itabapoana, permitindo identificar sub-bacias mais preservadas ou mais fragmentadas.
+
+**Dados necessários:**
+- `Fragmentos_MataNativa_BH_I_ES.gpkg`
+- Sub-bacias da Bacia do Itabapoana (ex.: micro_RH recortado pela bacia, ou divisão hidrológica mais detalhada se disponível)
+
+**Procedimento (QGIS):**
+1. **Preparar sub-bacias:** Se a Bacia do Itabapoana for uma microrregião única, considerar subdivisão por mesorregiões ou por microbacias (ANA/SNIRH ou dados locais). Alternativa: dividir a bacia por municípios como proxy de sub-unidades.
+2. **Interseção espacial:** Fragmentos ∩ sub-bacias. Cada fragmento recebe o atributo da sub-bacia onde está.
+3. **Resumir por categoria:** Contagem e área por sub-bacia; distribuição por classes de tamanho, forma e conectividade.
+4. **Métricas por sub-bacia:** Número de fragmentos, área total de Mata Nativa, percentual da sub-bacia, fragmentação média.
+
+**Saídas esperadas:** Tabela comparativa entre sub-bacias; mapas temáticos por sub-bacia; identificação de sub-bacias prioritárias para conservação ou restauração.
+
+**Observação:** A disponibilidade de sub-bacias dentro da Bacia do Itabapoana depende das bases (ANA, órgãos estaduais). Se não houver divisão oficial, a análise por município (Etapa 18) pode servir como aproximação.
+
+---
+
 ## Onde encontrar cada coisa
 
 | Procurando por... | Arquivo ou pasta |
