@@ -1,0 +1,29 @@
+# QGIS
+*.qgz~
+*.qgs~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+.venv/
+.env
+
+# R
+.Rhistory
+.RData
+.Rproj.user
+
+# Sistema e IDE
+.cursor/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Outputs temporários
+*.log
+*.tmp
