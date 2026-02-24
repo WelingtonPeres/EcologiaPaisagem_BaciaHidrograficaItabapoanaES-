@@ -57,11 +57,31 @@ Citações das fontes de dados e referências bibliográficas. Metadados em `fon
 
 ### Mello et al. (2016) — Conectividade e priorização (transição Mata Atlântica–Cerrado)
 
-> MELLO, K.; TOPPA, R. H.; LEITE, E. C. Priority areas for forest conservation in an urban landscape at the transition between Atlantic Forest and Cerrado. **Cerne**, v. 22, n. 3, p. 277-288, 2016. https://doi.org/10.1590/01047760201622032172
+> MELLO, K.; TOPPA, R. H.; LEITE, E. C. Priority areas for forest conservation in an urban landscape at the transition between Atlantic Forest and Cerrado. **Cerne**, v. 22, n. 3, p. 277-288, 2016. https://doi.org/10.1590/01047760201622032172. Disponível também em: https://www.researchgate.net/publication/309558866
 
 ### Pirovani et al. (2014) - Bacia do Rio Itapemirim, ES
 
 > PIROVANI, D. B. et al. Análise espacial de fragmentos florestais na Bacia do Rio Itapemirim, ES. **Revista Árvore**, v. 38, n. 2, p. 271-281, 2014. https://doi.org/10.1590/S0100-67622014000200007
+
+### Área Mínima Mapeável (AMM)
+
+> RUTCHEY, K.; VILCHEK, L. Air photointerpretation and satellite imagery analysis techniques for mapping cattail coverage in a northern Everglades impoundment. **Photogrammetric Engineering & Remote Sensing**, v. 65, n. 10, p. 1157-1162, 1999.
+
+> RUTCHEY, K. et al. Determining an appropriate minimum mapping unit in vegetation mapping for ecosystem restoration: a case study from the Everglades, USA. **Landscape Ecology**, v. 23, n. 7, p. 813-828, 2008. https://doi.org/10.1007/s10980-008-9243-6
+
+> WICKHAM, J. D. et al. Evaluating the effectiveness of standard landscape metrics for discriminating forest fragmentation in the Neuse River Basin, North Carolina, USA. **Environmental Monitoring and Assessment**, v. 98, n. 1-3, p. 295-310, 2004.
+
+### Fechamento morfológico e barreiras lineares (estradas)
+
+> The Application of Landscape Indices in Landscape Ecology. ResearchGate, 2012. Disponível em: https://www.researchgate.net/publication/221926138_The_Application_of_Landscape_Indices_in_Landscape_Ecology
+
+> MADER, H. J. Animal habitat isolation by roads and agricultural fields. **Biological Conservation**, v. 29, n. 1, p. 81-96, 1984. https://doi.org/10.1016/0006-3207(84)90015-6
+
+> FORMAN, R. T. T. **Land Mosaics: The Ecology of Landscapes and Regions**. Cambridge: Cambridge University Press, 1997.
+
+> HARRIS, L. D. **The Fragmented Forest: Island Biogeography Theory and the Preservation of Biotic Diversity**. Chicago: University of Chicago Press, 1984.
+
+> SCHREIBER, K.-F. Connectivity in landscape ecology. In: SCHREIBER, K.-F. (Ed.). **Connectivity in Landscape Ecology**. Münster: Münstersche Geographische Arbeiten, 1988. p. 11-19.
 
 ### Estudos complementares
 

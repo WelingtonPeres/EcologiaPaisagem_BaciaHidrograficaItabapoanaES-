@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: Ecologia da Paisagem - Bacia do Itabapoana (ES)
+message: Se usar este projeto, cite-o usando os metadados deste arquivo.
+type: dataset
+abstract: >-
+  Análise de fragmentos de Mata Nativa e Mata Nativa em Estágio Inicial de
+  Regeneração na Bacia do Itabapoana, Espírito Santo. Inclui métricas de
+  fragmentação florestal (área, perímetro, forma, conectividade, isolamento)
+  e classificações por tamanho, forma e conectividade estrutural.
+keywords:
+  - ecologia da paisagem
+  - fragmentação florestal
+  - Mata Atlântica
+  - bacia do Itabapoana
+  - Espírito Santo
+  - SIG
+  - QGIS
+license: MIT
+preferred-citation:
+  type: dataset
+  title: Ecologia da Paisagem - Bacia do Itabapoana (ES)
+  year: 2025

@@ -1,6 +1,6 @@
 # Fontes de Dados
 
-Catálogo das fontes de dados do projeto.
+Catálogo das fontes de dados do projeto Ecologia da Paisagem da Bacia do Itabapoana (ES). Para a convenção de nomes dos arquivos, ver `nomenclatura.md`.
 
 ---
 
@@ -8,7 +8,7 @@ Catálogo das fontes de dados do projeto.
 
 | Campo | Informação |
 |-------|------------|
-| **Arquivo** | `Dados/Shapes_Completos/ES_Municipios_2024_Completo/` |
+| **Arquivo** | `Dados/Dados_Brutos/ES_Municipios_2024_Completo/` |
 | **Fonte** | IBGE — Instituto Brasileiro de Geografia e Estatística |
 | **Produto** | Malha Municipal Digital (MMD) 2024 |
 | **Unidade** | Municípios do Espírito Santo |
@@ -25,7 +25,7 @@ Catálogo das fontes de dados do projeto.
 
 | Campo | Informação |
 |-------|------------|
-| **Arquivo** | `Dados/Shapes_Completos/BaciasHidrograficas_Completo/` |
+| **Arquivo** | `Dados/Dados_Brutos/BaciasHidrograficas_Completo/` |
 | **Fonte** | ANA — Agência Nacional de Águas e Saneamento Básico / SNIRH |
 | **Produto** | Divisão Hidrográfica Nacional (DHN250) |
 | **Unidade** | Macrorregiões (macro_RH), Mesorregiões (meso_RH), Microrregiões (micro_RH) |
@@ -42,7 +42,7 @@ Catálogo das fontes de dados do projeto.
 
 | Campo | Informação |
 |-------|------------|
-| **Arquivo** | `Dados/Shapes_Completos/BR_UF_2024_Completo/` |
+| **Arquivo** | `Dados/Dados_Brutos/BR_UF_2024_Completo/` |
 | **Fonte** | IBGE — Instituto Brasileiro de Geografia e Estatística |
 | **Produto** | Malha Municipal Digital (MMD) 2024 |
 | **Unidade** | Unidades da Federação (27 estados + DF) |
@@ -61,7 +61,7 @@ Catálogo das fontes de dados do projeto.
 
 | Campo | Informação |
 |-------|------------|
-| **Arquivo** | `Dados/Shapes_Completos/ijsn_mapeamento_uso_solo_2019_2020/` |
+| **Arquivo** | `Dados/Dados_Brutos/ijsn_mapeamento_uso_solo_2019_2020/` |
 | **Fonte** | IJSN — Instituto Jones dos Santos Neves / Geobases ES |
 | **Produto** | Mapeamento de Uso e Cobertura do Solo ES 2019-2020 |
 | **Unidade** | Estado do Espírito Santo |
