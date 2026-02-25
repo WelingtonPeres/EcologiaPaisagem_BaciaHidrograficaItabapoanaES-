@@ -471,21 +471,56 @@ array_to_string(overlay_intersects('Municipios_ES_Analise_UTM', "NM_MUN"))
 
 ---
 
-## 📋 Próximos passos
+### Etapa 18. Análise estatística: histograma da área (AREA_HA) ✅
 
-### Etapa 18. 📋 Contagem de fragmentos por tamanho
+**O que foi feito:** Criação de script Python para plotar histogramas da variável AREA_HA (área em hectares dos fragmentos), usando os intervalos da classificação de tamanho (Etapa 12).
 
-**Objetivo:** Quantificar o número de fragmentos em cada classe de tamanho (Muito pequeno, Pequeno, Médio, Grande, Muito grande) para caracterizar a estrutura da paisagem.
+**Onde está:** `scripts/AnaliseEstatistica/histograma/plotarHistograma_area_ha.py`
 
-**Como fazer (QGIS):**
-1. Abra a camada `Fragmentos_MataNativa_BH_I_ES`
-2. Use a ferramenta **Resumir por categoria** (Vetor > Ferramentas de análise > Resumir por categoria) ou a **Tabela de atributos** com o campo `CLASSE_TAMANHO` (ou `TAMANHO`)
-3. Conte as feições por valor do campo de classificação de tamanho
-4. Registre os resultados em tabela (ex.: em `resultados/` ou na documentação)
+**Dados de entrada:** `MataNativa_Mesclagem_Fragmentos.csv` (ou equivalente exportado da tabela de atributos dos fragmentos), com coluna `AREA_HA`.
 
-**Alternativa:** Na tabela de atributos, use *Selecionar feições por expressão* para cada classe e anote a contagem, ou exporte para planilha e use tabela dinâmica.
+**Funcionalidades:**
+
+| Função | Descrição |
+|--------|-----------|
+| `definir_caracteristicas_histograma(**kwargs)` | Retorna dicionário com bins, labels, cores, padrões e demais parâmetros (customizável via kwargs) |
+| `plotar_histograma_normal(serie, ax, config)` | Histograma por frequência (contagem), com rótulos nas barras |
+| `plotar_histograma_densidade(serie, ax, config)` | Histograma por densidade (proporção), com rótulos em percentual |
+
+**Intervalos usados (classificação TAMANHO):** [0-5], [5-10], [10-100], [100-250], [≥250] ha.
+
+**Como executar:**
+
+```bash
+cd scripts/AnaliseEstatistica/histograma
+pip install -r ../requirements.txt
+python plotarHistograma_area_ha.py
+```
+
+**Saídas geradas:**
+
+- `histograma_area_ha.png` — histograma por frequência
+- `histograma_area_ha_densidade.png` — histograma por densidade
+- Ambos com barras cinza, borda preta e frequência/percentual acima de cada barra
+
+## Imagens geradas
+
+### Histograma da área dos fragmentos (frequência)
+
+![Histograma por frequência dos fragmentos - AREA_HA](../../scripts/AnaliseEstatistica/histograma/histograma_area_ha.png)
+
+O histograma acima mostra a distribuição da área dos fragmentos de Mata Nativa em hectares. A maioria dos fragmentos está nas classes menores, especialmente abaixo de 10 ha, com poucas unidades de grande porte.
+
+### Histograma da área dos fragmentos (densidade)
+
+![Histograma por densidade dos fragmentos - AREA_HA](../../scripts/AnaliseEstatistica/histograma/histograma_area_ha_densidade.png)
+
+No histograma de densidade, as proporções ficam evidentes: grande parte dos fragmentos pertencem às menores classes de área, e apenas uma pequena fração alcança tamanhos superiores a 100 ha.
+
 
 ---
+
+## 📋 Próximos passos
 
 ### Etapa 19. 📋 Aplicar classificações para visualização por cor em shapes diferentes
 
@@ -576,5 +611,6 @@ array_to_string(overlay_intersects('Municipios_ES_Analise_UTM', "NM_MUN"))
 | Uso do solo recortado (Bacia Itabapoana ES) | `Dados/Recortes_Bacia/UsoSolo_BH_Itabapoana_ES_Recorte/UsoSolo_BH_Itabapoana_ES_Recorte_UTM.gpkg` |
 | Mata Nativa + Mata em Estágio Inicial (códigos 1 e 2, mesmo shape) | `Dados/Recortes_Bacia/MataNativa_BH_Itabapoana_ES_Extracao/` — shape: `MataNativa_BH_Itabapoana_ES_Extracao_UTM` |
 | Fragmentos de Mata Nativa (unificados, um polígono por fragmento) | `Dados/Fragmentos_Analise/Fragmentos_MataNativa_BH_I_ES.gpkg` |
+| Histograma de área (frequência e densidade) | `scripts/AnaliseEstatistica/histograma/` — `histograma_area_ha.png`, `histograma_area_ha_densidade.png` |
 
 ---
